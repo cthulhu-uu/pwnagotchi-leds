@@ -1,0 +1,16 @@
+    pwnpwnsleds:
+        enabled: true
+        # notification duration in seconds
+        notification_duration: 3
+        brightness: .8
+        # effect options are rainbow, checkered, starburst, solid, blinking, shootingstars, confetti, and snake
+        effects:
+            # on_handshake: none
+            on_peer_detected: shooting stars
+            on_bored: 
+                effect: solid
+                colors: 207, 45, 65
+            on_sad:
+                effect: solid
+                colors: 255, 0, 255
+            on_ready: solid

@@ -1,0 +1,3 @@
+- separate config file for duration of notification, effects, and attributes (color, for now)
+- effects will include checkered, starburst (or fireworks), solid, blinking; prob get some effects off of the ledshim repo, like rainbow
+- 

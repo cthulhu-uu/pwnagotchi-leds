@@ -1,0 +1,29 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "upload",
+            "type": "shell",
+            "command": "scp ${file} pwnpwns:plugins",
+            "problemMatcher": []
+        },
+        {
+            "label": "restart",
+            "type": "shell",
+            "command": "ssh pwnpwns 'sudo touch /root/.pwnagotchi-auto && sudo systemctl restart pwnagotchi'",
+            "problemMatcher": []
+        },
+        {
+            "label": "upload and restart",
+            "type": "shell",
+            "command": "scp ${file} pwnpwns:plugins && ssh pwnpwns 'sudo touch /root/.pwnagotchi-auto && sudo systemctl restart pwnagotchi'",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
